@@ -1,0 +1,4 @@
+interface:
+  display_name: "Terry Roast"
+  short_description: "TempleOS-style code roast"
+  default_prompt: "Use $terry-roast to inspect this repository locally and roast the code with concrete file-backed findings."

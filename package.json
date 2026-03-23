@@ -1,0 +1,18 @@
+{
+  "name": "north-york-studio",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "cf:dev": "wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "vite": "^8.0.0",
+    "wrangler": "^4.75.0"
+  }
+}

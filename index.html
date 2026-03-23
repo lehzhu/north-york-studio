@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terry Roast</title>
+    <meta
+      name="description"
+      content="Art-house setup page for Terry Roast on Codex and Claude Code."
+    >
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <canvas id="field" class="field" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+
+    <main class="page">
+      <header class="masthead">
+        <a class="brand" href="./home.html">North York Studio</a>
+      </header>
+
+      <section class="scene" id="scene">
+        <div class="visual" id="visual">
+          <div class="glow glow-a" data-depth="0.2"></div>
+          <div class="glow glow-b" data-depth="0.34"></div>
+          <div class="orbit orbit-a" data-depth="0.16"></div>
+          <div class="orbit orbit-b" data-depth="0.26"></div>
+          <div class="monolith monolith-left" data-depth="0.42"></div>
+          <div class="monolith monolith-right" data-depth="0.56"></div>
+
+          <figure class="portrait-shell" id="portrait">
+            <div class="portrait-back"></div>
+            <div class="portrait-frame">
+              <img src="./catpic.webp" alt="Terry Davis holding a cat">
+            </div>
+          </figure>
+        </div>
+
+        <section class="copy" id="copy">
+          <h1>Terry</h1>
+
+          <div class="instruction-list">
+            <div class="instruction">
+              <span>Claude</span>
+              <code>Download <a href="./downloads/claude/skills/terry-roast/SKILL.md">SKILL.md</a></code>
+            </div>
+            <div class="instruction">
+              <span>Place</span>
+              <code><span class="inline-code">~/.claude/skills/terry-roast/SKILL.md</span></code>
+            </div>
+            <div class="instruction">
+              <span>Run</span>
+              <code>Restart Claude Code if needed, then ask: <span class="inline-code">Roast this repo at medium heat</span></code>
+            </div>
+            <div class="instruction">
+              <span>Codex</span>
+              <code>Download <a href="./downloads/terry-roast-bundle.zip">terry-roast-bundle.zip</a> for the Codex bundle</code>
+            </div>
+          </div>
+
+          <div class="download-row">
+            <a href="./downloads/terry-roast-bundle.zip">Bundle zip</a>
+            <a href="./downloads/codex/terry-roast/SKILL.md">Codex skill</a>
+            <a href="./downloads/claude/skills/terry-roast/SKILL.md">Claude skill</a>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
