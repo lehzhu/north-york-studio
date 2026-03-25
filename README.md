@@ -2,6 +2,24 @@
 
 Static multi-page site built with Vite and deployable to Cloudflare Workers Static Assets.
 
+## Distribution
+
+### Claude Code plugin marketplace
+
+This repo now doubles as a Claude Code plugin marketplace.
+
+1. Add the marketplace:
+   `/plugin marketplace add lehzhu/north-york-studio`
+2. Install the Terry plugin:
+   `/plugin install terry-roast@north-york-studio`
+
+The plugin itself lives in `plugins/terry-roast/` and exposes the `terry-roast` skill.
+
+### Direct skill downloads
+
+- Claude skill: `public/downloads/claude/skills/terry-roast/SKILL.md`
+- Codex skill bundle: `public/downloads/terry-roast-bundle.zip`
+
 ## Commands
 
 - `npm install`

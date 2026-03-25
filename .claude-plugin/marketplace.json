@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "north-york-studio",
+  "description": "North York Studio plugins for Claude Code",
+  "owner": {
+    "name": "North York Studio",
+    "email": "hello@northyorkstudio.com"
+  },
+  "plugins": [
+    {
+      "name": "terry-roast",
+      "description": "TempleOS-inspired repo roast skill for Claude Code",
+      "version": "1.0.0",
+      "author": {
+        "name": "North York Studio",
+        "email": "hello@northyorkstudio.com"
+      },
+      "source": "./plugins/terry-roast"
+    }
+  ]
+}
