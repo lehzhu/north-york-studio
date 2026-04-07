@@ -1,25 +1,32 @@
 {
-  "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "north-york-studio",
-  "main": "./src/index.js",
-  "compatibility_date": "2026-03-17",
-  "assets": {
-    "directory": "./dist",
-    "binding": "ASSETS",
-    "run_worker_first": true
-  },
-  "routes": [
-    {
-      "pattern": "northyorkstudio.com",
-      "custom_domain": true
-    },
-    {
-      "pattern": "www.northyorkstudio.com",
-      "custom_domain": true
-    },
-    {
-      "pattern": "terry.northyorkstudio.com",
-      "custom_domain": true
-    }
-  ]
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "north-york-studio",
+	"main": "./src/index.js",
+	"compatibility_date": "2026-03-17",
+	"assets": {
+		"directory": "./dist",
+		"binding": "ASSETS",
+		"run_worker_first": true
+	},
+	"routes": [
+		{
+			"pattern": "northyorkstudio.com",
+			"custom_domain": true
+		},
+		{
+			"pattern": "www.northyorkstudio.com",
+			"custom_domain": true
+		},
+		{
+			"pattern": "terry.northyorkstudio.com",
+			"custom_domain": true
+		}
+	],
+	"r2_buckets": [
+		{
+			"bucket_name": "nys-media",
+			"binding": "nys_media",
+			"remote": true
+		}
+	]
 }
