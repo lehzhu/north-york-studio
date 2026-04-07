@@ -1,42 +1,30 @@
 # North York Studio
 
-Static multi-page site built with Vite and deployable to Cloudflare Workers Static Assets.
+Fullscreen parallax video homepage deployed to Cloudflare Workers with video hosted on R2.
 
-## Distribution
+## How it works
 
-### Claude Code plugin marketplace
+The homepage plays a looping video scaled to 130% of the viewport. Moving the cursor shifts the visible frame in the opposite direction, creating a subtle parallax effect. Audio is muted by default with a toggle in the top-right corner.
 
-This repo now doubles as a Claude Code plugin marketplace.
+## Architecture
 
-1. Add the marketplace:
-   `/plugin marketplace add lehzhu/north-york-studio`
-2. Install the Terry plugin:
-   `/plugin install terry-roast@north-york-studio`
-
-The plugin itself lives in `plugins/terry-roast/` and exposes the `terry-roast` skill.
-
-### Direct skill downloads
-
-- Claude skill: `public/downloads/claude/skills/terry-roast/SKILL.md`
-- Codex skill bundle: `public/downloads/terry-roast-bundle.zip`
+- **Site**: Vite build → Cloudflare Workers Static Assets
+- **Video**: Hosted on Cloudflare R2 (`nys-media` bucket)
+- **Routing**: Cloudflare Worker routes `northyorkstudio.com` → `home.html`, `terry.northyorkstudio.com` → `index.html`
 
 ## Commands
 
-- `npm install`
-- `npm run dev`
-- `npm run build`
-- `npm run preview`
-- `npm run cf:dev`
-- `npm run deploy`
+- `npm run dev` — local dev server
+- `npm run build` — production build to `dist/`
+- `npm run deploy` — build + deploy to Cloudflare
 
 ## Deployment
 
-1. Log in to Cloudflare: `npx wrangler login`
-2. Build and deploy: `npm run deploy`
-3. In Cloudflare, attach the production domain to the deployed Worker/asset project.
+1. `npx wrangler login`
+2. `npm run deploy`
 
-## Notes
+Video is served from R2 and not included in the repo (`.gitignore`'d). To update the video:
 
-- The production build outputs to `dist/`.
-- The `public/downloads/` directory is copied through unchanged so download links remain stable.
-- This setup stays portable: any host that can serve the contents of `dist/` can run the site.
+```
+npx wrangler r2 object put nys-media/video1.mp4 --file <path> --remote
+```
