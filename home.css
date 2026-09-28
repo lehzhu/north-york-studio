@@ -53,22 +53,6 @@ html, body { height: 100%; overflow: hidden; background: #000; }
   display: none;
 }
 
-.orion-link {
-  position: fixed;
-  bottom: 1.4rem;
-  left: 1.6rem;
-  font-family: "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
-  font-size: 0.72rem;
-  color: rgba(255, 255, 255, 0.4);
-  text-decoration: none;
-  letter-spacing: 0.04em;
-  z-index: 10;
-  transition: color 300ms;
-}
-
-.orion-link:hover {
-  color: rgba(255, 255, 255, 0.8);
-}
 
 .site-link {
   position: fixed;
